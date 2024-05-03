@@ -1,0 +1,31 @@
+<div class="login-background">
+  <div class="login-container">
+    <div class="login-header">
+      <a class="skip-login" (click)="skipLogin()">Skip Login</a>
+    </div>
+    <div class="login-content">
+      <div class="sign-in-header">Sign in</div>
+      <div class="label">Choose an option below</div>
+      <div class="login-options">
+        <button class="email" (click)="onEmailSignIn()">
+          <label class="email-icon">Sign in with email</label>
+        </button>
+        <button class="sms" (click)="onSMSSignIn()">
+          <label class="sms-icon">Sign in with SMS</label>
+        </button>
+        <div class="or-label">or continue with</div>
+        <div class="alternative-login">
+          <button (click)="onGoogleSignIn()">
+            <label class="google-icon">Sign in with Google</label>
+          </button>
+          <button (click)="onAppleSignIn()">
+            <label class="apple-icon">Sign in with Apple</label>
+          </button>
+        </div>
+        <div class="login-footer">
+          Have an account? <a (click)="logIn()">Log in</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
