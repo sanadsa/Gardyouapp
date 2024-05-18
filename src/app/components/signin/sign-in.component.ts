@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {AuthService} from '../../services/auth.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-sign-in',
@@ -7,13 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SignInComponent implements OnInit {
 
-  constructor() { }
+  constructor(private authService: AuthService, private router: Router) { }
 
   ngOnInit(): void {
   }
 
   onEmailSignIn() {
     console.log('Email sign in');
+
   }
 
   onSMSSignIn() {
@@ -22,6 +25,7 @@ export class SignInComponent implements OnInit {
 
   onGoogleSignIn() {
     console.log('Google sign in');
+    // navigate to the google sign in page
   }
 
   onAppleSignIn() {
@@ -30,6 +34,7 @@ export class SignInComponent implements OnInit {
 
   logIn() {
     console.log('Log in');
+    this.router.navigate(['/login']);
   }
 
   skipLogin() {
